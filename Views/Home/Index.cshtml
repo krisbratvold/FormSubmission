@@ -1,0 +1,41 @@
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="~/style.css">
+</head>
+
+<body>
+        <h1>Enter Information</h1>
+    <div class="container">
+        <div class="form">
+            <form asp-action="Create" asp-controller="Home" method="post">
+                <label asp-for="FirstName"></label>
+                <span asp-validation-for="FirstName"></span>
+                <input asp-for="FirstName">
+                <label asp-for="LastName"></label>
+                <span asp-validation-for="LastName"></span>
+                <input asp-for="LastName">
+                <label asp-for="Age"></label>
+                <span asp-validation-for="Age"></span>
+                <input asp-for="Age">
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email"></span>
+                <input asp-for="Email">
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password"></span>
+                <input asp-for="Password">
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
